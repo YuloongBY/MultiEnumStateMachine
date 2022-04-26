@@ -14,8 +14,12 @@ Statemachine that can support multiple statelists
 
 ## 特徴
 ### ・複数ステートリストが持てる
-　※現在最大3つステートリストまで持てますが、拡張可能です。
+
+　　※ 現在最大3つステートリストまで持てますが、拡張可能です。
+ 
 ### ・Garbage Collection発生しない
+　
+　処理性能を重視するので、Garbage Collectionを回避する構造で作成した。
 
 ### ・Monobehaviourの機能を使わないので、処理が速いし、移植も簡単
 
