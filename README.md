@@ -7,7 +7,7 @@
 Statemachine that can support multiple statelists
  
 ```diff
-- ジェネリッククラスの制約条件にSystem.Enumが利用されたところがあるので、C#のバージョンが7.3以上が必要になります。
+- ジェネリッククラスの制約条件にSystem.Enumが利用されたところがあるので、C#のバージョンが7.3以上になる必要があります。
 ``` 
 ## 紹介
 　ステートマシンは基本的に一つステートリスト（Enum利用する場合が多い）しか持つことができませんが、実際利用した時、親クラスが汎用ステートリストを持って、子クラスが個別専用ステートリストを持ちたい場合がたくさんありました。もちろん、親クラスの汎用ステートリストに「FreeState」みたいな子クラスから自由的に使えるステートを追加することが方法の一つですが、やや不便なので、根本的に解決するため、複数ステートリストが持てるステートマシンを作成しました。
@@ -361,7 +361,7 @@ virtual public bool CanChangeState()
 ### StateMachineBase
   ステートマシンベースクラス
   
-  ステートマシンを作成する時、 Enum利用数によって、継承されるステートマシンベースクラスが違う
+  ステートマシンを作成する時、 Enum利用数によって、継承されるステートマシンベースクラスが違う。
 ```
   StateMachineBase<ENUM,ACTOR>
   StateMachineBase<ENUM_1,ENUM_2,ACTOR>  
@@ -459,7 +459,7 @@ public bool GetState( out ENUM _state , int _idx )
 ### ChildStateBase
   ステートベースクラス
   
-  ステート処理を作成する時、 Enum利用数によって、継承されるステートベースクラスが違う
+  ステート処理を作成する時、 Enum利用数によって、継承されるステートベースクラスが違う。
 ```
   ChildStateBase<ENUM,ACTOR>
   ChildStateBase<ENUM_1,ENUM_2,ACTOR>  
